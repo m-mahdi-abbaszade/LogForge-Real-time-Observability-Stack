@@ -14,24 +14,52 @@ Nginx → Fluent Bit → OpenSearch → Dashboards
 
 ## ⚙️ Tech Stack
 
-- OpenSearch
-- OpenSearch Dashboards
-- Fluent Bit
-- Nginx
-- Docker Compose
-
----
-
-## 📦 How to Run
-
-```bash
-docker-compose up -d
-```
+- OpenSearch (Search & Storage)
+- OpenSearch Dashboards (Visualization)
+- Fluent Bit (Log Processor)
+- Nginx (Log Generator)
+- Docker Compose (Orchestration)
 
 ---
 
 ## 🌐 Services
 
-. Nginx: http://localhost:8080
-. Dashboards: http://localhost:5601
-. OpenSearch: http://localhost:9200
+- Nginx: http://localhost:8080
+
+- Dashboards: http://localhost:5601
+
+- OpenSearch: http://localhost:9200
+
+---
+
+# 📁 Project Structure
+
+logforge/
+│
+├── docker-compose.yml
+├── README.md
+│
+├── fluent-bit/
+│ └── fluent-bit.conf
+│
+├── nginx/
+│ └── logs/
+│
+└── screenshots/
+└── dashboard.png
+
+---
+
+# 🚀 Getting Started
+
+## 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/logforge.git
+cd logforge
+```
+
+2️⃣ Start the system
+```bash
+docker-compose up -d
+```
