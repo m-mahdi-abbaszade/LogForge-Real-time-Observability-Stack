@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+
+  opensearch:
+    image: opensearchproject/opensearch:2.15.0
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - DISABLE_SECURITY_PLUGIN=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    networks:
+      - lognet
+
+  dashboards:
+    image: opensearchproject/opensearch-dashboards:2.15.0
+    container_name: dashboards
+    ports:
+      - "5601:5601"
+    environment:
+      - OPENSEARCH_HOSTS=http://opensearch:9200
+      - DISABLE_SECURITY_DASHBOARDS_PLUGIN=true
+    depends_on:
+      - opensearch
+    networks:
+      - lognet
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/logs:/var/log/nginx
+    networks:
+      - lognet
+
+  fluent-bit:
+    image: fluent/fluent-bit:latest
+    container_name: fluent-bit
+    volumes:
+      - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - ./nginx/logs:/var/log/nginx
+    depends_on:
+      - opensearch
+    networks:
+      - lognet
+
+networks:
+  lognet:
+    driver: bridge

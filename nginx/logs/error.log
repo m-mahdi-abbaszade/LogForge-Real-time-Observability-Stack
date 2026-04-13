@@ -1,0 +1,5 @@
+2026/04/13 08:32:05 [notice] 1#1: using the "epoll" event method
+2026/04/13 08:32:05 [notice] 1#1: nginx/1.27.5
+2026/04/13 08:32:05 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2026/04/13 08:32:05 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+2026/04/13 08:32:05 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
