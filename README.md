@@ -59,7 +59,27 @@ git clone https://github.com/YOUR_USERNAME/logforge.git
 cd logforge
 ```
 
-2️⃣ Start the system
+### 2️⃣ Start the system
+
 ```bash
 docker-compose up -d
 ```
+
+### 3️⃣ Generate logs
+
+```bash
+curl http://localhost:8080
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
