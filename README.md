@@ -85,7 +85,7 @@ for i in {1..20}; do curl http://localhost:8080; done
 
 3-Create index pattern:
 
-  nginx-logs*
+   nginx-logs*
   
 4-Use time field:
 
@@ -97,13 +97,13 @@ for i in {1..20}; do curl http://localhost:8080; done
 
 You can build:
 
-Request count over time
+- Request count over time
 
-HTTP status code distribution (200/404/500)
+- HTTP status code distribution (200/404/500)
 
-Top client IPs
+- Top client IPs
 
-Traffic spikes monitoring
+- Traffic spikes monitoring
 
 ---
 
@@ -111,10 +111,46 @@ Traffic spikes monitoring
 
 ![Dashboard](https://github.com/m-mahdi-abbaszade/logforge/blob/main/screenshots/Screenshot%202026-04-13%20120326.png)
 
+---
 
+![Dashboard](https://github.com/m-mahdi-abbaszade/logforge/blob/main/screenshots/Screenshot%202026-04-13%20120531.png)
 
+---
 
+![Dashboard](https://github.com/m-mahdi-abbaszade/logforge/blob/main/screenshots/Screenshot%202026-04-13%20120718.png)
 
+---
+
+## 🧠 What This Project Demonstrates
+
+This project demonstrates:
+
+- Log pipeline design
+- Observability fundamentals
+- Containerized architecture
+- Real-time data processing
+- DevOps basics
+
+---
+
+## 🚀 Future Improvements
+- Add Python/FastAPI application logs
+- Add alerting system (error thresholds)
+- Add log filtering (4xx/5xx separation)
+- Add multi-node OpenSearch cluster
+- Add Kafka ingestion layer
+
+---
+
+## 👨‍💻 Author
+
+Built as a DevOps learning project focused on observability and log management.
+
+---
+
+## ⭐ If you like this project
+
+Give it a star ⭐ and feel free to contribute!
 
 
 
